@@ -1,0 +1,45 @@
+import random as rnd
+
+name=input("Kullanıcı adı giriniz:")
+print(f'Welcome {name}')
+
+kelimeler=["kalem","silgi","python","java","bilgisayar","mühendis"]
+harf=rnd.choice(kelimeler)
+
+harfler=[] #Kullanıcının girdiği harfler buraya gelecek
+a=len(harf)
+print("a:",a)
+tahminetme=6
+for i in kelimeler:
+
+    harfler=input("harf giriniz:")
+    if tahminetme >0:
+
+       if harfler in kelimeler:
+         print("ifade doğru")
+         tahminetme -=1
+         continue
+       elif harfler not in harf:
+        print("yanlış ifade")
+        tahminetme -= 1
+        continue
+
+    else:
+        for i in range(len(harf)):
+            if harfler == harf[i]:
+                print("doğru tahmin")
+                
+
+    sonuc=input("Tahminizi girebilirsiniz:")
+    if sonuc in harf:
+            buldum=input("kelimeyi tamamlayınız:")
+            if buldum == kelimeler:
+               print("kazandınız!!!")
+               break
+            else:
+                tahminetme -=1
+                print("kaybettiniz")
+                break
+
+if tahminetme == 0:
+           print("hakkınız kalmadı")
