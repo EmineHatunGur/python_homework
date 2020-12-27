@@ -10,3 +10,5 @@ if he is under 18,print( you can't go out)
 if he is over 18,print(you can go out)
 
 homework3:Code the Hangman Game
+
+finalproject:Create a simple student management system
